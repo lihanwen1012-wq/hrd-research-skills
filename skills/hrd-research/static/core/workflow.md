@@ -1,4 +1,4 @@
-# HRD Writing Workflow
+# HRD Research Workflow
 
 1. Identify the user's requested output: revision, draft, structure, critique, or journal-fit advice.
 2. Detect the task, genre, section, and journal axes from `manifest.yaml`.

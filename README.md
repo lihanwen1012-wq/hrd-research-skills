@@ -2,7 +2,7 @@
 
 Codex skill pack for Human Resource Development research work.
 
-This repository is designed as an expandable HRD research skill pack. It currently includes one installable skill, `hrd-writing`, plus shared APA 7 and HRD domain references. The first skill helps Codex revise and draft HRD manuscript text while preserving the author's meaning, citations, constructs, empirical claims, and APA 7 social science style.
+This repository is designed as an expandable HRD research skill pack. It currently includes one installable skill, `hrd-research`, plus shared APA 7 and HRD domain references. The first skill helps Codex revise and draft HRD manuscript text while preserving the author's meaning, citations, constructs, empirical claims, and APA 7 social science style.
 
 ## Included Skill
 
@@ -11,7 +11,7 @@ skills/
 ├── _shared/
 │   ├── apa-7.md
 │   └── hrd-domain.md
-└── hrd-writing/
+└── hrd-research/
     ├── SKILL.md
     ├── manifest.yaml
     ├── agents/
@@ -23,7 +23,7 @@ skills/
         └── fragments/
 ```
 
-## What `hrd-writing` Supports
+## What `hrd-research` Supports
 
 - HRD manuscript drafting and revision
 - APA 7 style polishing
@@ -42,20 +42,20 @@ From the repository root:
 ```bash
 mkdir -p ~/.codex/skills
 cp -R skills/_shared ~/.codex/skills/
-cp -R skills/hrd-writing ~/.codex/skills/
+cp -R skills/hrd-research ~/.codex/skills/
 ```
 
 Start a fresh Codex session after copying.
 
 ## Verify
 
-Ask Codex for an HRD writing task:
+Ask Codex for an HRD research writing task:
 
 ```text
 Revise this HRD literature review paragraph in APA 7 style.
 ```
 
-Codex should use the HRD writing workflow, preserve citations and meaning, and avoid generic academic polishing.
+Codex should use the HRD research workflow, preserve citations and meaning, and avoid generic academic polishing.
 
 ## Full Installation Guide
 

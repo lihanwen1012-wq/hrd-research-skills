@@ -1,4 +1,4 @@
-# HRD Writing Revision Checklist
+# HRD Research Revision Checklist
 
 Use this checklist when revising or evaluating HRD manuscript prose.
 

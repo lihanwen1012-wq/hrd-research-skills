@@ -28,7 +28,7 @@ skills/
 ├── _shared/
 │   ├── apa-7.md
 │   └── hrd-domain.md
-└── hrd-writing/
+└── hrd-research/
     ├── SKILL.md
     ├── manifest.yaml
     ├── agents/
@@ -71,12 +71,12 @@ If you already have this folder locally, just run the install commands from the 
 
 ### 3.2 Install One Skill
 
-Example: install `hrd-writing`.
+Example: install `hrd-research`.
 
 ```bash
 mkdir -p ~/.codex/skills
 cp -R skills/_shared ~/.codex/skills/
-cp -R skills/hrd-writing ~/.codex/skills/
+cp -R skills/hrd-research ~/.codex/skills/
 ```
 
 Copying `_shared` is intentional. It preserves shared APA 7 and HRD domain references used by the skill.
@@ -113,7 +113,7 @@ When this repository changes:
 cd /path/to/hrd-research-skills
 git pull
 cp -R skills/_shared ~/.codex/skills/
-cp -R skills/hrd-writing ~/.codex/skills/
+cp -R skills/hrd-research ~/.codex/skills/
 ```
 
 If you installed all skills, re-copy `skills/_shared` and all `skills/hrd-*` folders after pulling:
@@ -128,7 +128,7 @@ for d in skills/hrd-*; do cp -R "$d" ~/.codex/skills/; done
 Do not do this:
 
 ```bash
-cp skills/hrd-writing/SKILL.md ~/.codex/skills/
+cp skills/hrd-research/SKILL.md ~/.codex/skills/
 ```
 
 That copies only one file and drops the rest of the skill bundle.
@@ -137,7 +137,7 @@ Use this instead:
 
 ```bash
 cp -R skills/_shared ~/.codex/skills/
-cp -R skills/hrd-writing ~/.codex/skills/
+cp -R skills/hrd-research ~/.codex/skills/
 ```
 
 ---
@@ -179,22 +179,22 @@ Create a user-level subagent:
 
 ```bash
 mkdir -p ~/.claude/agents
-cat > ~/.claude/agents/hrd-writing.md <<'EOF'
+cat > ~/.claude/agents/hrd-research.md <<'EOF'
 ---
-name: hrd-writing
+name: hrd-research
 description: Use proactively for Human Resource Development academic writing, APA 7 manuscript revision, HRD theory framing, literature synthesis, research questions, hypotheses, discussion sections, and implications for HRD practice.
 ---
 
-When invoked, first read `~/ai-skills/hrd-research-skills/skills/hrd-writing/SKILL.md`. Treat that file as the governing workflow.
+When invoked, first read `~/ai-skills/hrd-research-skills/skills/hrd-research/SKILL.md`. Treat that file as the governing workflow.
 
-If the skill references supporting files, read only the specific files you need from `~/ai-skills/hrd-research-skills/skills/hrd-writing/` and `~/ai-skills/hrd-research-skills/skills/_shared/`. Do not replace the skill with generic academic polishing.
+If the skill references supporting files, read only the specific files you need from `~/ai-skills/hrd-research-skills/skills/hrd-research/` and `~/ai-skills/hrd-research-skills/skills/_shared/`. Do not replace the skill with generic academic polishing.
 EOF
 ```
 
 Then start a new Claude Code session and ask:
 
 ```text
-Use the hrd-writing subagent to revise this HRD discussion section.
+Use the hrd-research subagent to revise this HRD discussion section.
 ```
 
 ### 4.4 Alternative Wrapper Method: Create A Slash Command
@@ -203,8 +203,8 @@ If you prefer a command instead of a subagent:
 
 ```bash
 mkdir -p ~/.claude/commands
-cat > ~/.claude/commands/hrd-writing.md <<'EOF'
-Read `~/ai-skills/hrd-research-skills/skills/hrd-writing/SKILL.md` first and follow it strictly. Read any directly needed supporting files from `~/ai-skills/hrd-research-skills/skills/hrd-writing/` and `~/ai-skills/hrd-research-skills/skills/_shared/`.
+cat > ~/.claude/commands/hrd-research.md <<'EOF'
+Read `~/ai-skills/hrd-research-skills/skills/hrd-research/SKILL.md` first and follow it strictly. Read any directly needed supporting files from `~/ai-skills/hrd-research-skills/skills/hrd-research/` and `~/ai-skills/hrd-research-skills/skills/_shared/`.
 
 $ARGUMENTS
 EOF
@@ -213,7 +213,7 @@ EOF
 Then inside Claude Code:
 
 ```text
-/hrd-writing Revise this HRD literature review paragraph in APA 7 style.
+/hrd-research Revise this HRD literature review paragraph in APA 7 style.
 ```
 
 ### 4.5 Why Wrappers Are Better Than Copying Only `SKILL.md`
@@ -245,7 +245,7 @@ If your agent supports reusable prompt folders, profile files, or custom system 
 ```text
 skills/
 ├── _shared/
-└── hrd-writing/
+└── hrd-research/
     ├── SKILL.md
     ├── agents/
     └── references/
@@ -284,7 +284,7 @@ Use manual folder reuse if:
 
 Check:
 
-- Did you install the full `skills/hrd-writing` folder rather than only `SKILL.md`?
+- Did you install the full `skills/hrd-research` folder rather than only `SKILL.md`?
 - Did you also install `skills/_shared`?
 - Did you start a fresh session after installation?
 - Are you asking for a task that clearly matches HRD writing, APA 7 manuscript revision, or HRD practice implications?
@@ -322,7 +322,7 @@ git clone <this-repository-url> hrd-research-skills
 cd hrd-research-skills
 mkdir -p ~/.codex/skills
 cp -R skills/_shared ~/.codex/skills/
-cp -R skills/hrd-writing ~/.codex/skills/
+cp -R skills/hrd-research ~/.codex/skills/
 ```
 
 ### Codex: Full Install
@@ -343,15 +343,15 @@ mkdir -p ~/ai-skills
 cd ~/ai-skills
 git clone <this-repository-url> hrd-research-skills
 mkdir -p ~/.claude/agents
-cat > ~/.claude/agents/hrd-writing.md <<'EOF'
+cat > ~/.claude/agents/hrd-research.md <<'EOF'
 ---
-name: hrd-writing
+name: hrd-research
 description: Use proactively for Human Resource Development academic writing, APA 7 manuscript revision, HRD theory framing, literature synthesis, and implications for HRD practice.
 ---
 
-When invoked, first read `~/ai-skills/hrd-research-skills/skills/hrd-writing/SKILL.md`. Treat that file as the governing workflow.
+When invoked, first read `~/ai-skills/hrd-research-skills/skills/hrd-research/SKILL.md`. Treat that file as the governing workflow.
 
-If the skill references supporting files, read only the specific files you need from `~/ai-skills/hrd-research-skills/skills/hrd-writing/` and `~/ai-skills/hrd-research-skills/skills/_shared/`.
+If the skill references supporting files, read only the specific files you need from `~/ai-skills/hrd-research-skills/skills/hrd-research/` and `~/ai-skills/hrd-research-skills/skills/_shared/`.
 EOF
 ```
 
@@ -364,7 +364,7 @@ If you only want the simplest path, use Codex local skills:
 ```bash
 mkdir -p ~/.codex/skills
 cp -R skills/_shared ~/.codex/skills/
-cp -R skills/hrd-writing ~/.codex/skills/
+cp -R skills/hrd-research ~/.codex/skills/
 ```
 
 Then start a fresh Codex session and ask for an HRD writing task.

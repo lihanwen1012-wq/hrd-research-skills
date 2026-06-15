@@ -1,4 +1,4 @@
-# APA 7 Guidance For HRD Writing
+# APA 7 Guidance For HRD Research
 
 Use this reference when revising APA-style HRD and social science manuscripts.
 

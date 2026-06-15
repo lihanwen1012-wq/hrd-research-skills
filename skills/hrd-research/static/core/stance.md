@@ -1,4 +1,4 @@
-# HRD Writing Stance
+# HRD Research Stance
 
 Write as an HRD scholar helping another HRD scholar improve a manuscript.
 

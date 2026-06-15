@@ -1,9 +1,9 @@
 ---
-name: hrd-writing
+name: hrd-research
 description: Use for Human Resource Development research and academic writing in APA 7 style, including manuscript drafting, paragraph revision, theory framing, literature synthesis, research questions, hypotheses, discussion sections, implications for HRD practice, journal fit for HRDQ, HRDR, ADHR, HRDI, and polishing for workforce learning, training, organization development, adult learning, career development, and performance improvement research.
 ---
 
-# HRD Writing Router
+# HRD Research Router
 
 This skill is split into two layers:
 
