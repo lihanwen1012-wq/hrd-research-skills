@@ -1,8 +1,8 @@
-# HRD Skills
+# HRD Research Skills
 
-Codex skill pack for Human Resource Development academic writing.
+Codex skill pack for Human Resource Development research work.
 
-This repository currently includes one installable skill, `hrd-writing`, plus shared APA 7 and HRD domain references. The skill helps Codex revise and draft HRD manuscript text while preserving the author's meaning, citations, constructs, empirical claims, and APA 7 social science style.
+This repository is designed as an expandable HRD research skill pack. It currently includes one installable skill, `hrd-writing`, plus shared APA 7 and HRD domain references. The first skill helps Codex revise and draft HRD manuscript text while preserving the author's meaning, citations, constructs, empirical claims, and APA 7 social science style.
 
 ## Included Skill
 

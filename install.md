@@ -1,17 +1,17 @@
-# hrd-skills Installation Guide
+# HRD Research Skills Installation Guide
 
-This file explains how to install the HRD skills in this repository so they are usable in Codex and other coding agents.
+This file explains how to install the HRD research skills in this repository so they are usable in Codex and other coding agents.
 
 The most important point is simple:
 
-- `hrd-skills` is not a Python package or npm package.
+- `hrd-research-skills` is not a Python package or npm package.
 - Each `skills/hrd-*` folder is one reusable skill unit.
 - In most cases, copy or reference the entire skill folder, not only `SKILL.md`.
-- `skills/_shared/` contains shared support content used by HRD skills.
+- `skills/_shared/` contains shared support content used by HRD research skills.
 
 Why that matters:
 
-- HRD skills can depend on `references/`.
+- HRD research skills can depend on `references/`.
 - Some skills read shared APA or HRD domain guidance from `../_shared`.
 - Copying only `SKILL.md` can silently break the workflow.
 
@@ -60,7 +60,7 @@ Clone or download this repository, then enter it:
 
 ```bash
 git clone <this-repository-url>
-cd hrd-skills
+cd hrd-research-skills
 ```
 
 If you already have this folder locally, just run the install commands from the repository root.
@@ -106,7 +106,7 @@ If the skill is discovered correctly, Codex should use the HRD writing workflow,
 When this repository changes:
 
 ```bash
-cd /path/to/hrd-skills
+cd /path/to/hrd-research-skills
 git pull
 cp -R skills/_shared ~/.codex/skills/
 cp -R skills/hrd-writing ~/.codex/skills/
@@ -158,13 +158,13 @@ Example:
 ```bash
 mkdir -p ~/ai-skills
 cd ~/ai-skills
-git clone <this-repository-url> hrd-skills
+git clone <this-repository-url> hrd-research-skills
 ```
 
 In the examples below, the repository path is:
 
 ```text
-~/ai-skills/hrd-skills
+~/ai-skills/hrd-research-skills
 ```
 
 If you use a different path, replace it consistently.
@@ -181,9 +181,9 @@ name: hrd-writing
 description: Use proactively for Human Resource Development academic writing, APA 7 manuscript revision, HRD theory framing, literature synthesis, research questions, hypotheses, discussion sections, and implications for HRD practice.
 ---
 
-When invoked, first read `~/ai-skills/hrd-skills/skills/hrd-writing/SKILL.md`. Treat that file as the governing workflow.
+When invoked, first read `~/ai-skills/hrd-research-skills/skills/hrd-writing/SKILL.md`. Treat that file as the governing workflow.
 
-If the skill references supporting files, read only the specific files you need from `~/ai-skills/hrd-skills/skills/hrd-writing/` and `~/ai-skills/hrd-skills/skills/_shared/`. Do not replace the skill with generic academic polishing.
+If the skill references supporting files, read only the specific files you need from `~/ai-skills/hrd-research-skills/skills/hrd-writing/` and `~/ai-skills/hrd-research-skills/skills/_shared/`. Do not replace the skill with generic academic polishing.
 EOF
 ```
 
@@ -200,7 +200,7 @@ If you prefer a command instead of a subagent:
 ```bash
 mkdir -p ~/.claude/commands
 cat > ~/.claude/commands/hrd-writing.md <<'EOF'
-Read `~/ai-skills/hrd-skills/skills/hrd-writing/SKILL.md` first and follow it strictly. Read any directly needed supporting files from `~/ai-skills/hrd-skills/skills/hrd-writing/` and `~/ai-skills/hrd-skills/skills/_shared/`.
+Read `~/ai-skills/hrd-research-skills/skills/hrd-writing/SKILL.md` first and follow it strictly. Read any directly needed supporting files from `~/ai-skills/hrd-research-skills/skills/hrd-writing/` and `~/ai-skills/hrd-research-skills/skills/_shared/`.
 
 $ARGUMENTS
 EOF
@@ -226,7 +226,7 @@ Keeping the repository cloned and pointing Claude Code at the real folder is mor
 ### 4.6 Update Later
 
 ```bash
-cd ~/ai-skills/hrd-skills
+cd ~/ai-skills/hrd-research-skills
 git pull
 ```
 
@@ -314,8 +314,8 @@ Then:
 ### Codex: One-Skill Install
 
 ```bash
-git clone <this-repository-url> hrd-skills
-cd hrd-skills
+git clone <this-repository-url> hrd-research-skills
+cd hrd-research-skills
 mkdir -p ~/.codex/skills
 cp -R skills/_shared ~/.codex/skills/
 cp -R skills/hrd-writing ~/.codex/skills/
@@ -324,8 +324,8 @@ cp -R skills/hrd-writing ~/.codex/skills/
 ### Codex: Full Install
 
 ```bash
-git clone <this-repository-url> hrd-skills
-cd hrd-skills
+git clone <this-repository-url> hrd-research-skills
+cd hrd-research-skills
 mkdir -p ~/.codex/skills
 cp -R skills/_shared ~/.codex/skills/
 for d in skills/hrd-*; do cp -R "$d" ~/.codex/skills/; done
@@ -337,7 +337,7 @@ for d in skills/hrd-*; do cp -R "$d" ~/.codex/skills/; done
 npm install -g @anthropic-ai/claude-code
 mkdir -p ~/ai-skills
 cd ~/ai-skills
-git clone <this-repository-url> hrd-skills
+git clone <this-repository-url> hrd-research-skills
 mkdir -p ~/.claude/agents
 cat > ~/.claude/agents/hrd-writing.md <<'EOF'
 ---
@@ -345,9 +345,9 @@ name: hrd-writing
 description: Use proactively for Human Resource Development academic writing, APA 7 manuscript revision, HRD theory framing, literature synthesis, and implications for HRD practice.
 ---
 
-When invoked, first read `~/ai-skills/hrd-skills/skills/hrd-writing/SKILL.md`. Treat that file as the governing workflow.
+When invoked, first read `~/ai-skills/hrd-research-skills/skills/hrd-writing/SKILL.md`. Treat that file as the governing workflow.
 
-If the skill references supporting files, read only the specific files you need from `~/ai-skills/hrd-skills/skills/hrd-writing/` and `~/ai-skills/hrd-skills/skills/_shared/`.
+If the skill references supporting files, read only the specific files you need from `~/ai-skills/hrd-research-skills/skills/hrd-writing/` and `~/ai-skills/hrd-research-skills/skills/_shared/`.
 EOF
 ```
 
