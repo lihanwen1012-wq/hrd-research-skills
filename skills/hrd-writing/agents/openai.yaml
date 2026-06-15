@@ -1,0 +1,4 @@
+interface:
+  display_name: "HRD Writing"
+  short_description: "Revise Human Resource Development manuscripts in APA 7 style."
+  default_prompt: "Use $hrd-writing to revise this HRD manuscript passage in APA 7 style while preserving my meaning and citations."
