@@ -1,0 +1,81 @@
+name: hrd-writing
+version: 2.0.0
+description: >
+  Router manifest for HRD academic writing. SKILL.md uses this file to
+  decide which reusable guidance fragments to load for a drafting,
+  revision, restructuring, review, or journal-fit request.
+
+always_load:
+  - ../_shared/apa-7.md
+  - ../_shared/hrd-domain.md
+  - static/core/stance.md
+  - static/core/workflow.md
+  - static/core/output-format.md
+
+axes:
+  task:
+    detect: >
+      Decide what kind of writing work the user is asking for. Use polish for
+      local clarity, style, APA, or sentence-level revision. Use draft for new
+      text. Use restructure for organization, flow, or argument rebuilding.
+      Use review for critique, readiness checks, or reviewer-facing assessment.
+    values:
+      polish: static/fragments/task/polish.md
+      draft: static/fragments/task/draft.md
+      restructure: static/fragments/task/restructure.md
+      review: static/fragments/task/review.md
+    default: polish
+    multi: false
+
+  genre:
+    detect: >
+      Identify the manuscript type. Use empirical for studies with data,
+      conceptual for theory or model-building manuscripts, review for
+      integrative/systematic/scoping reviews, methods for method-focused work,
+      and generic when the type is unclear or not important.
+    values:
+      empirical: static/fragments/genre/empirical.md
+      conceptual: static/fragments/genre/conceptual.md
+      review: static/fragments/genre/review.md
+      methods: static/fragments/genre/methods.md
+      generic: static/fragments/genre/generic.md
+    default: generic
+    multi: false
+
+  section:
+    detect: >
+      Identify the manuscript section the user wants drafted or revised. The
+      user may name one or several sections. Use reviewer-facing for response
+      letters, reviewer comments, cover letters, or revision memos.
+    values:
+      abstract: static/fragments/section/abstract.md
+      introduction: static/fragments/section/introduction.md
+      literature-review: static/fragments/section/literature-review.md
+      theory: static/fragments/section/theory.md
+      methods: static/fragments/section/methods.md
+      rq-hypotheses: static/fragments/section/rq-hypotheses.md
+      discussion: static/fragments/section/discussion.md
+      implications: static/fragments/section/implications.md
+      conclusion: static/fragments/section/conclusion.md
+      reviewer-facing: static/fragments/section/reviewer-facing.md
+    multi: true
+
+  journal:
+    detect: >
+      Use the target journal named by the user. Map Human Resource Development
+      Quarterly to hrdq, Human Resource Development Review to hrdr, Advances in
+      Developing Human Resources to adhr, and Human Resource Development
+      International to hrdi. Use generic when the journal is unclear.
+    values:
+      generic: static/fragments/journal/generic.md
+      hrdq: static/fragments/journal/hrdq.md
+      hrdr: static/fragments/journal/hrdr.md
+      adhr: static/fragments/journal/adhr.md
+      hrdi: static/fragments/journal/hrdi.md
+    default: generic
+    multi: false
+
+references:
+  on_demand:
+    - condition: revising or evaluating prose quality
+      path: references/revision-checklist.md

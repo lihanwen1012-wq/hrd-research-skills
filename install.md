@@ -30,10 +30,14 @@ skills/
 │   └── hrd-domain.md
 └── hrd-writing/
     ├── SKILL.md
+    ├── manifest.yaml
     ├── agents/
     │   └── openai.yaml
-    └── references/
-        └── revision-checklist.md
+    ├── references/
+    │   └── revision-checklist.md
+    └── static/
+        ├── core/
+        └── fragments/
 ```
 
 If you want one skill, install one folder plus `skills/_shared`. If you want the full collection, install `skills/_shared` plus all `skills/hrd-*` folders.

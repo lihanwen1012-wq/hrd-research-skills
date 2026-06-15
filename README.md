@@ -13,10 +13,14 @@ skills/
 │   └── hrd-domain.md
 └── hrd-writing/
     ├── SKILL.md
+    ├── manifest.yaml
     ├── agents/
     │   └── openai.yaml
-    └── references/
-        └── revision-checklist.md
+    ├── references/
+    │   └── revision-checklist.md
+    └── static/
+        ├── core/
+        └── fragments/
 ```
 
 ## What `hrd-writing` Supports
@@ -28,6 +32,7 @@ skills/
 - Research questions and hypotheses
 - Discussion sections
 - HRD practice implications
+- Journal fit for HRDQ, HRDR, ADHR, and HRDI
 - Cautious social science claims for correlational, qualitative, cross-sectional, or exploratory designs
 
 ## Install For Codex

@@ -1,76 +1,67 @@
 ---
 name: hrd-writing
-description: Use for Human Resource Development academic writing in APA 7 style, including manuscript drafting, paragraph revision, theory framing, literature synthesis, research questions, hypotheses, discussion sections, implications for HRD practice, and journal-style polishing for HRD, workforce learning, training, organization development, adult learning, career development, and performance improvement research.
+description: Use for Human Resource Development research and academic writing in APA 7 style, including manuscript drafting, paragraph revision, theory framing, literature synthesis, research questions, hypotheses, discussion sections, implications for HRD practice, journal fit for HRDQ, HRDR, ADHR, HRDI, and polishing for workforce learning, training, organization development, adult learning, career development, and performance improvement research.
 ---
 
-# HRD Writing
+# HRD Writing Router
 
-## Overview
+This skill is split into two layers:
 
-Revise and draft Human Resource Development manuscripts using APA 7 conventions, social science logic, and HRD field language. Preserve the author's argument, citations, constructs, and empirical claims while improving clarity, structure, scholarly tone, and fit for HRD audiences.
+- A router layer: this `SKILL.md` plus `manifest.yaml`.
+- A reusable guidance layer: shared files, core files, and fragments under `static/`.
 
-## Core Workflow
+Do not try to apply the full workflow from memory. Route the request, read the matching files, then revise or draft.
 
-1. Identify the manuscript section: abstract, introduction, literature review, theory, methods, results, discussion, implications, conclusion, or reviewer-facing text.
-2. Clarify the task: polishing, restructuring, shortening, expanding, APA correction, argument strengthening, or journal fit.
-3. Preserve meaning, claims, citations, variables, constructs, hypotheses, sample details, and results unless the user asks for substantive rewriting.
-4. Improve topic sentences, transitions, paragraph unity, conceptual precision, and logical sequencing.
-5. Use APA 7 social science style rather than Nature-style compression, promotional framing, or biomedical conventions.
-6. Flag issues that require author verification, especially missing citations, unsupported causal language, ambiguous constructs, inconsistent terminology, and questionable statistical interpretation.
+## Routing Protocol
 
-## Load References
+### 1. Load The Manifest And Core Layer
 
-- For APA citation, tense, headings, numbers, inclusive language, and reference concerns, read `../_shared/apa-7.md`.
-- For HRD domain framing, common constructs, and practice implications, read `../_shared/hrd-domain.md`.
-- For revision quality checks and output patterns, read `references/revision-checklist.md`.
+Read `manifest.yaml`.
 
-Read only the reference files needed for the user's task.
+Then read every file listed under `always_load`. These files contain the APA, HRD domain, stance, workflow, and output rules that apply to every request.
 
-## Writing Priorities
+### 2. Detect Axis Values
 
-- Make the theoretical contribution explicit: what the manuscript adds to HRD research, not only what topic it discusses.
-- Connect constructs to HRD-relevant contexts such as workplace learning, training transfer, leadership development, organization development, career development, employee development, or performance improvement.
-- Distinguish empirical findings from interpretation and implications.
-- Use cautious social science claims: "suggests," "is associated with," "may indicate," or "provides evidence that" unless the design supports stronger causal language.
-- Keep citations attached to the claims they support.
-- Prefer clear, direct prose over ornamental academic phrasing.
-- Avoid adding new sources, facts, theories, or results unless the user supplies them.
+Use `manifest.yaml` to detect:
 
-## Common Tasks
+- `task`: polish, draft, restructure, or review.
+- `genre`: empirical, conceptual, review, methods, or generic.
+- `section`: abstract, introduction, literature-review, theory, methods, rq-hypotheses, discussion, implications, conclusion, or reviewer-facing.
+- `journal`: generic, hrdq, hrdr, adhr, or hrdi.
 
-### Polish Manuscript Text
+Default to `generic` when the user does not specify enough information. Ask only when the missing value changes the work in a consequential way.
 
-Provide:
+State the detected values in one short line before the substantive output when doing a substantial revision or draft.
 
-1. Revised version
-2. Brief notes on major changes
-3. Issues to verify, if any
+### 3. Load Matching Fragments
 
-### Strengthen Literature Review
+For each detected axis value, read the mapped file in `manifest.yaml`.
 
-Check for synthesis rather than source-by-source summary. Improve grouping by themes, theories, constructs, tensions, methods, or populations. Make the gap lead naturally to the research purpose or questions.
+Load only the fragments needed for the request. Do not read every file under `static/`.
 
-### Improve Theory And Hypotheses
+### 4. Apply Guidance In Priority Order
 
-Clarify the theoretical mechanism, boundary conditions, and expected relationships among constructs. For hypotheses, preserve numbering and make each statement testable.
+Apply the loaded material in this order:
 
-### Revise Discussion And Implications
+1. Shared APA 7 and HRD domain guidance.
+2. Core stance, workflow, and output format.
+3. Genre-specific expectations.
+4. Section-specific structure and failure modes.
+5. Journal-specific fit guidance.
+6. The user's stated preferences.
 
-Separate:
+Preserve the author's claims, citations, constructs, variables, sample details, research design, hypotheses, findings, and limitations unless the user explicitly asks for substantive rewriting.
 
-1. Summary of key findings
-2. Theoretical contributions
-3. Implications for HRD practice
-4. Limitations
-5. Future research
+### 5. Reach For References Only When Needed
 
-Do not overclaim practical impact from limited or correlational evidence.
+Use `references/revision-checklist.md` when revising or evaluating prose quality.
+
+Use deeper references only when the user asks for detailed review, a checklist, or explicit diagnosis. If a needed reference does not exist yet, say what would be useful to add instead of inventing source-specific rules.
 
 ## Output Rules
 
-- If the user asks for a direct revision, put the revised text first.
-- Keep explanatory notes concise.
-- Do not invent citations or complete unknown reference details.
+- If the user asks for direct revision, put the revised text first.
+- Keep notes concise unless the user asks for detailed explanation.
+- Do not invent citations, findings, journal policies, or reference details.
 - Preserve APA in-text citation style unless the user asks to convert formats.
-- Use track-change style only when explicitly requested.
-- When text is already strong, make light edits and say so.
+- Flag missing evidence, unsupported causal language, ambiguous constructs, inconsistent terminology, and claims that exceed the design.
