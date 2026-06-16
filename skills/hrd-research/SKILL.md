@@ -1,6 +1,6 @@
 ---
 name: hrd-research
-description: Use for Human Resource Development research and academic writing in APA 7 style, including manuscript drafting, paragraph revision, theory framing, literature synthesis, research questions, hypotheses, discussion sections, implications for HRD practice, journal fit for HRDQ, HRDR, ADHR, HRDI, and polishing for workforce learning, training, organization development, adult learning, career development, and performance improvement research.
+description: Use for Human Resource Development research in APA 7 style, including manuscript drafting, paragraph revision, theory framing, literature synthesis, research questions, hypotheses, discussion sections, implications for HRD practice, journal fit for HRDQ, HRDR, ADHR, HRDI, and HRD research charts, graphs, tables, figure captions, visualization choices, and interpretation for workforce learning, training, organization development, adult learning, career development, and performance improvement research.
 ---
 
 # HRD Research Router
@@ -24,10 +24,11 @@ Then read every file listed under `always_load`. These files contain the APA, HR
 
 Use `manifest.yaml` to detect:
 
-- `task`: polish, draft, restructure, or review.
+- `task`: polish, draft, restructure, review, visualize, interpret-visual, or table.
 - `genre`: empirical, conceptual, review, methods, or generic.
 - `section`: abstract, introduction, literature-review, theory, methods, rq-hypotheses, discussion, implications, conclusion, or reviewer-facing.
 - `journal`: generic, hrdq, hrdr, adhr, or hrdi.
+- `visualization`: chart-choice, apa-figure, apa-table, code-guidance, or narrative.
 
 Default to `generic` when the user does not specify enough information. Ask only when the missing value changes the work in a consequential way.
 
@@ -48,7 +49,8 @@ Apply the loaded material in this order:
 3. Genre-specific expectations.
 4. Section-specific structure and failure modes.
 5. Journal-specific fit guidance.
-6. The user's stated preferences.
+6. Visualization guidance when the request involves graphs, charts, tables, captions, or figure interpretation.
+7. The user's stated preferences.
 
 Preserve the author's claims, citations, constructs, variables, sample details, research design, hypotheses, findings, and limitations unless the user explicitly asks for substantive rewriting.
 
@@ -64,4 +66,5 @@ Use deeper references only when the user asks for detailed review, a checklist, 
 - Keep notes concise unless the user asks for detailed explanation.
 - Do not invent citations, findings, journal policies, or reference details.
 - Preserve APA in-text citation style unless the user asks to convert formats.
+- For graphs, charts, or tables, preserve the user's data and statistical meaning; do not invent values, labels, or relationships.
 - Flag missing evidence, unsupported causal language, ambiguous constructs, inconsistent terminology, and claims that exceed the design.

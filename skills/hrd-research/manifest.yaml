@@ -1,9 +1,10 @@
 name: hrd-research
-version: 2.0.0
+version: 2.1.0
 description: >
-  Router manifest for HRD academic writing. SKILL.md uses this file to
+  Router manifest for HRD research writing and visualization. SKILL.md uses this file to
   decide which reusable guidance fragments to load for a drafting,
-  revision, restructuring, review, or journal-fit request.
+  revision, restructuring, review, journal-fit, graph, chart, table, or
+  figure-interpretation request.
 
 always_load:
   - ../_shared/apa-7.md
@@ -19,11 +20,16 @@ axes:
       local clarity, style, APA, or sentence-level revision. Use draft for new
       text. Use restructure for organization, flow, or argument rebuilding.
       Use review for critique, readiness checks, or reviewer-facing assessment.
+      Use visualize for graph or chart creation, interpret-visual for explaining
+      an existing visualization, and table for APA-style tables.
     values:
       polish: static/fragments/task/polish.md
       draft: static/fragments/task/draft.md
       restructure: static/fragments/task/restructure.md
       review: static/fragments/task/review.md
+      visualize: static/fragments/task/visualize.md
+      interpret-visual: static/fragments/task/interpret-visual.md
+      table: static/fragments/task/table.md
     default: polish
     multi: false
 
@@ -75,7 +81,25 @@ axes:
     default: generic
     multi: false
 
+  visualization:
+    detect: >
+      Use this axis when the user asks for a graph, chart, figure, table,
+      figure title, figure note, caption, visualization critique, or a
+      paragraph interpreting a visual. Use chart-choice when selecting a chart
+      type, apa-figure for figure formatting or captions, apa-table for table
+      formatting, code-guidance when code or tool instructions are requested,
+      and narrative when writing about a visual in manuscript prose.
+    values:
+      chart-choice: static/fragments/visualization/chart-choice.md
+      apa-figure: static/fragments/visualization/apa-figure.md
+      apa-table: static/fragments/visualization/apa-table.md
+      code-guidance: static/fragments/visualization/code-guidance.md
+      narrative: static/fragments/visualization/narrative.md
+    multi: true
+
 references:
   on_demand:
     - condition: revising or evaluating prose quality
       path: references/revision-checklist.md
+    - condition: creating, formatting, or interpreting figures and tables
+      path: references/visualization-checklist.md

@@ -2,7 +2,7 @@
 
 Codex skill pack for Human Resource Development research work.
 
-This repository is designed as an expandable HRD research skill pack. It currently includes one installable skill, `hrd-research`, plus shared APA 7 and HRD domain references. The skill helps Codex revise, draft, restructure, and review HRD manuscript text while preserving the author's meaning, citations, constructs, empirical claims, and APA 7 social science style.
+This repository is designed as an expandable HRD research skill pack. It currently includes one installable skill, `hrd-research`, plus shared APA 7 and HRD domain references. The skill helps Codex revise, draft, restructure, review, visualize, and interpret HRD research materials while preserving the author's meaning, citations, constructs, empirical claims, data integrity, and APA 7 social science style.
 
 ## Included Skill
 
@@ -37,6 +37,7 @@ skills/
 - Abstracts, introductions, methods, discussions, conclusions, and reviewer-facing text
 - HRD practice implications
 - Journal fit for HRDQ, HRDR, ADHR, and HRDI
+- HRD research graphs, charts, tables, figure captions, and visual interpretation
 - Cautious social science claims for correlational, qualitative, cross-sectional, or exploratory designs
 
 ## How The Skill Works
@@ -50,10 +51,11 @@ skills/
 
 The current router axes are:
 
-- `task`: polish, draft, restructure, review
+- `task`: polish, draft, restructure, review, visualize, interpret-visual, table
 - `genre`: empirical, conceptual, review, methods, generic
 - `section`: abstract, introduction, literature-review, theory, methods, rq-hypotheses, discussion, implications, conclusion, reviewer-facing
 - `journal`: generic, HRDQ, HRDR, ADHR, HRDI
+- `visualization`: chart-choice, apa-figure, apa-table, code-guidance, narrative
 
 ## Install For Codex
 
@@ -95,6 +97,14 @@ Use $hrd-research to review this conceptual manuscript introduction for HRDR fit
 
 ```text
 Use $hrd-research to strengthen these HRD practice implications without overclaiming from correlational findings.
+```
+
+```text
+Use $hrd-research to recommend the best chart for these training transfer results and write an APA-style figure note.
+```
+
+```text
+Use $hrd-research to interpret this interaction plot for an HRDQ discussion section.
 ```
 
 ## Update Local Codex Install
