@@ -1,10 +1,10 @@
 name: hrd-research
-version: 2.1.0
+version: 2.2.0
 description: >
   Router manifest for HRD research writing and visualization. SKILL.md uses this file to
-  decide which reusable guidance fragments to load for a drafting,
-  revision, restructuring, review, journal-fit, graph, chart, table, or
-  figure-interpretation request.
+  decide which reusable guidance fragments to load for developing a paper from
+  scratch, drafting, revision, restructuring, review, journal-fit, graph,
+  chart, table, or figure-interpretation request.
 
 always_load:
   - ../_shared/apa-7.md
@@ -16,13 +16,16 @@ always_load:
 axes:
   task:
     detect: >
-      Decide what kind of writing work the user is asking for. Use polish for
+      Decide what kind of research work the user is asking for. Use build-paper
+      when the user wants to develop a paper from an idea, data, notes,
+      materials, findings, or partial plan. Use polish for
       local clarity, style, APA, or sentence-level revision. Use draft for new
       text. Use restructure for organization, flow, or argument rebuilding.
       Use review for critique, readiness checks, or reviewer-facing assessment.
       Use visualize for graph or chart creation, interpret-visual for explaining
       an existing visualization, and table for APA-style tables.
     values:
+      build-paper: static/fragments/task/build-paper.md
       polish: static/fragments/task/polish.md
       draft: static/fragments/task/draft.md
       restructure: static/fragments/task/restructure.md
@@ -97,9 +100,28 @@ axes:
       narrative: static/fragments/visualization/narrative.md
     multi: true
 
+  paper-development:
+    detect: >
+      Use this axis when the user asks to build a manuscript from scratch,
+      create a paper plan, turn ideas or data into a paper, develop the
+      central contribution, map evidence to claims, or create section
+      blueprints. Use motivation for the central contribution, architecture
+      for the whole-paper argument arc, evidence-bank for claim-to-evidence
+      mapping, section-blueprint for section-by-section planning, and
+      drafting-plan for staged drafting.
+    values:
+      motivation: static/fragments/paper-development/motivation.md
+      architecture: static/fragments/paper-development/architecture.md
+      evidence-bank: static/fragments/paper-development/evidence-bank.md
+      section-blueprint: static/fragments/paper-development/section-blueprint.md
+      drafting-plan: static/fragments/paper-development/drafting-plan.md
+    multi: true
+
 references:
   on_demand:
     - condition: revising or evaluating prose quality
       path: references/revision-checklist.md
     - condition: creating, formatting, or interpreting figures and tables
       path: references/visualization-checklist.md
+    - condition: developing a paper from scratch, planning a whole manuscript, or mapping evidence to claims
+      path: references/paper-development-checklist.md

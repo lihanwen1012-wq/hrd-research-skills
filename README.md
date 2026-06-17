@@ -2,7 +2,7 @@
 
 Codex skill pack for Human Resource Development research work.
 
-This repository is designed as an expandable HRD research skill pack. It currently includes one installable skill, `hrd-research`, plus shared APA 7 and HRD domain references. The skill helps Codex revise, draft, restructure, review, visualize, and interpret HRD research materials while preserving the author's meaning, citations, constructs, empirical claims, data integrity, and APA 7 social science style.
+This repository is designed as an expandable HRD research skill pack. It currently includes one installable skill, `hrd-research`, plus shared APA 7 and HRD domain references. The skill helps Codex develop papers from scratch, revise, draft, restructure, review, visualize, and interpret HRD research materials while preserving the author's meaning, citations, constructs, empirical claims, data integrity, and APA 7 social science style.
 
 ## Included Skill
 
@@ -30,6 +30,8 @@ skills/
 ## What `hrd-research` Supports
 
 - HRD manuscript drafting, revision, restructuring, and review
+- Paper development from ideas, notes, data, findings, or rough materials
+- Motivation, paper architecture, evidence-bank, section-blueprint, and drafting-plan support
 - APA 7 social science style polishing
 - Literature review synthesis
 - Theory framing and conceptual contribution
@@ -51,11 +53,12 @@ skills/
 
 The current router axes are:
 
-- `task`: polish, draft, restructure, review, visualize, interpret-visual, table
+- `task`: build-paper, polish, draft, restructure, review, visualize, interpret-visual, table
 - `genre`: empirical, conceptual, review, methods, generic
 - `section`: abstract, introduction, literature-review, theory, methods, rq-hypotheses, discussion, implications, conclusion, reviewer-facing
 - `journal`: generic, HRDQ, HRDR, ADHR, HRDI
 - `visualization`: chart-choice, apa-figure, apa-table, code-guidance, narrative
+- `paper-development`: motivation, architecture, evidence-bank, section-blueprint, drafting-plan
 
 ## Install For Codex
 
@@ -97,6 +100,14 @@ Use $hrd-research to review this conceptual manuscript introduction for HRDR fit
 
 ```text
 Use $hrd-research to strengthen these HRD practice implications without overclaiming from correlational findings.
+```
+
+```text
+Use $hrd-research to help me develop an HRD paper from scratch. I have a topic, rough findings, and a possible target journal.
+```
+
+```text
+Use $hrd-research to create a motivation statement, paper architecture, and section blueprint for a conceptual HRD paper.
 ```
 
 ```text
