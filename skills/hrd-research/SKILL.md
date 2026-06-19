@@ -1,6 +1,6 @@
 ---
 name: hrd-research
-description: Use for Human Resource Development research in APA 7 style, including developing papers from scratch, building manuscripts from ideas or materials, manuscript drafting, paragraph revision, strict in-text citation integrity, theory framing, literature synthesis, research questions, hypotheses, discussion sections, implications for HRD practice, journal fit for HRDQ, HRDR, ADHR, HRDI, and HRD research charts, graphs, tables, figure captions, visualization choices, and interpretation for workforce learning, training, organization development, adult learning, career development, and performance improvement research.
+description: Use for Human Resource Development research in APA 7 style, including developing papers from scratch, building manuscripts from ideas or materials, manuscript drafting, paragraph revision, strict in-text citation integrity, reference-list checking, citation-reference matching, APA 7 reference formatting, theory framing, literature synthesis, research questions, hypotheses, discussion sections, implications for HRD practice, journal fit for HRDQ, HRDR, ADHR, HRDI, and HRD research charts, graphs, tables, figure captions, visualization choices, and interpretation for workforce learning, training, organization development, adult learning, career development, and performance improvement research.
 ---
 
 # HRD Research Router
@@ -28,6 +28,7 @@ Use `manifest.yaml` to detect:
 - `genre`: empirical, conceptual, review, methods, or generic.
 - `section`: abstract, introduction, literature-review, theory, methods, rq-hypotheses, discussion, implications, conclusion, or reviewer-facing.
 - `journal`: generic, hrdq, hrdr, adhr, or hrdi.
+- `citation`: in-text-integrity, reference-list-check, citation-reference-match, or apa-reference-format.
 - `visualization`: chart-choice, apa-figure, apa-table, code-guidance, or narrative.
 - `paper-development`: motivation, architecture, evidence-bank, section-blueprint, or drafting-plan.
 
@@ -47,13 +48,14 @@ Apply the loaded material in this order:
 
 1. Shared APA 7 and HRD domain guidance.
 2. Core citation integrity rules.
-3. Core stance, workflow, and output format.
-4. Genre-specific expectations.
-5. Section-specific structure and failure modes.
-6. Journal-specific fit guidance.
-7. Paper-development guidance when the request involves building a paper from an idea, notes, data, or materials.
-8. Visualization guidance when the request involves graphs, charts, tables, captions, or figure interpretation.
-9. The user's stated preferences.
+3. Citation and reference-list guidance when the request involves references, bibliography, cited works, DOI, APA reference entries, or citation/reference matching.
+4. Core stance, workflow, and output format.
+5. Genre-specific expectations.
+6. Section-specific structure and failure modes.
+7. Journal-specific fit guidance.
+8. Paper-development guidance when the request involves building a paper from an idea, notes, data, or materials.
+9. Visualization guidance when the request involves graphs, charts, tables, captions, or figure interpretation.
+10. The user's stated preferences.
 
 Preserve the author's claims, citations, constructs, variables, sample details, research design, hypotheses, findings, and limitations unless the user explicitly asks for substantive rewriting.
 
@@ -71,6 +73,7 @@ Use deeper references only when the user asks for detailed review, a checklist, 
 - Preserve APA in-text citation style unless the user asks to convert formats.
 - Treat every source-dependent claim as needing an adjacent citation. If a revision moves, merges, splits, generalizes, or strengthens a cited sentence, move or duplicate the citation as needed and flag uncertain support.
 - Do not let a paragraph-final citation appear to support claims that precede it unless the original text clearly uses that citation for the full claim sequence.
+- For reference-list tasks, check both directions: every in-text citation should have a reference entry, and every reference entry should be cited or marked as uncited.
 - For build-from-scratch requests, separate user-provided evidence from proposed argument structure; mark missing evidence as needed rather than filling it in.
 - For graphs, charts, or tables, preserve the user's data and statistical meaning; do not invent values, labels, or relationships.
 - Flag missing evidence, unsupported causal language, ambiguous constructs, inconsistent terminology, and claims that exceed the design.

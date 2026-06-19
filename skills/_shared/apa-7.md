@@ -15,6 +15,16 @@ Use this reference when revising APA-style HRD and social science manuscripts.
 - Use present tense for established theory, article structure, and general conclusions.
 - Use cautious language when the design is correlational, qualitative, cross-sectional, or exploratory.
 
+## Reference List Integrity
+
+- Check that each in-text citation has a matching reference-list entry.
+- Check that each reference-list entry is cited in the text or marked as uncited.
+- Flag author-year mismatches between in-text citations and reference entries.
+- Flag likely duplicate reference entries.
+- Do not invent missing reference details. Use `[missing year]`, `[missing DOI]`, `[missing issue]`, or `[verify source details]` when needed.
+- Prefer DOI URLs in the form `https://doi.org/...` when DOI information is supplied.
+- Use sentence case for article and chapter titles, and title case for journal titles and book titles.
+
 ## Manuscript Structure
 
 Typical APA/social science structure:

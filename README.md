@@ -33,6 +33,7 @@ skills/
 - Paper development from ideas, notes, data, findings, or rough materials
 - Motivation, paper architecture, evidence-bank, section-blueprint, and drafting-plan support
 - Strict in-text citation integrity and claim-to-citation checking
+- Reference-list checking, APA 7 reference formatting, and citation-reference matching
 - APA 7 social science style polishing
 - Literature review synthesis
 - Theory framing and conceptual contribution
@@ -58,6 +59,7 @@ The current router axes are:
 - `genre`: empirical, conceptual, review, methods, generic
 - `section`: abstract, introduction, literature-review, theory, methods, rq-hypotheses, discussion, implications, conclusion, reviewer-facing
 - `journal`: generic, HRDQ, HRDR, ADHR, HRDI
+- `citation`: in-text-integrity, reference-list-check, citation-reference-match, apa-reference-format
 - `visualization`: chart-choice, apa-figure, apa-table, code-guidance, narrative
 - `paper-development`: motivation, architecture, evidence-bank, section-blueprint, drafting-plan
 
@@ -109,6 +111,10 @@ Use $hrd-research to help me develop an HRD paper from scratch. I have a topic, 
 
 ```text
 Use $hrd-research to create a motivation statement, paper architecture, and section blueprint for a conceptual HRD paper.
+```
+
+```text
+Use $hrd-research to check whether my in-text citations match my reference list and flag APA 7 reference issues.
 ```
 
 ```text

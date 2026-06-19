@@ -1,10 +1,10 @@
 name: hrd-research
-version: 2.3.0
+version: 2.4.0
 description: >
-  Router manifest for HRD research writing and visualization. SKILL.md uses this file to
+  Router manifest for HRD research writing, citation/reference checking, and visualization. SKILL.md uses this file to
   decide which reusable guidance fragments to load for developing a paper from
-  scratch, drafting, revision, restructuring, review, journal-fit, graph,
-  chart, table, or figure-interpretation request.
+  scratch, drafting, revision, restructuring, review, citation/reference checks,
+  journal-fit, graph, chart, table, or figure-interpretation request.
 
 always_load:
   - ../_shared/apa-7.md
@@ -85,6 +85,23 @@ axes:
     default: generic
     multi: false
 
+  citation:
+    detect: >
+      Use this axis when the user asks about citations, in-text citations,
+      references, bibliography, reference list, cited works, DOI, APA reference
+      entries, missing citations, uncited references, or citation/reference
+      consistency. Use in-text-integrity for claim-to-citation placement,
+      reference-list-check for reference-list completeness and entry quality,
+      citation-reference-match for matching in-text citations to reference
+      entries in both directions, and apa-reference-format for APA 7 formatting
+      of reference entries.
+    values:
+      in-text-integrity: static/fragments/citation/in-text-integrity.md
+      reference-list-check: static/fragments/citation/reference-list-check.md
+      citation-reference-match: static/fragments/citation/citation-reference-match.md
+      apa-reference-format: static/fragments/citation/apa-reference-format.md
+    multi: true
+
   visualization:
     detect: >
       Use this axis when the user asks for a graph, chart, figure, table,
@@ -122,6 +139,8 @@ references:
   on_demand:
     - condition: revising or evaluating prose quality
       path: references/revision-checklist.md
+    - condition: checking references, reference-list quality, or citation/reference consistency
+      path: references/reference-checklist.md
     - condition: creating, formatting, or interpreting figures and tables
       path: references/visualization-checklist.md
     - condition: developing a paper from scratch, planning a whole manuscript, or mapping evidence to claims
