@@ -7,6 +7,7 @@ Use this checklist when revising or evaluating HRD manuscript prose.
 - Identify the section and purpose.
 - Note the target audience or journal if provided.
 - Preserve all citations, numbers, hypotheses, research questions, participant details, and construct names.
+- Treat citation preservation as claim preservation: when moving or rewriting a claim, move its citation with it.
 - Ask only if a missing detail prevents responsible revision.
 
 ## Clarity
@@ -28,6 +29,9 @@ Use this checklist when revising or evaluating HRD manuscript prose.
 ## APA And Social Science Style
 
 - Are citations placed next to supported claims?
+- Does each empirical, theoretical, definitional, comparative, or evaluative claim have citation support or user-provided evidence?
+- Did any revision merge, split, generalize, or strengthen a cited claim in a way that changes what the citation can support?
+- Are paragraph-final citations being used too broadly?
 - Are tense choices appropriate?
 - Are statistical claims preserved and reported cautiously?
 - Is causal language justified by the design?

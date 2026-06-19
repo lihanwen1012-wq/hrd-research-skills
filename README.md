@@ -32,6 +32,7 @@ skills/
 - HRD manuscript drafting, revision, restructuring, and review
 - Paper development from ideas, notes, data, findings, or rough materials
 - Motivation, paper architecture, evidence-bank, section-blueprint, and drafting-plan support
+- Strict in-text citation integrity and claim-to-citation checking
 - APA 7 social science style polishing
 - Literature review synthesis
 - Theory framing and conceptual contribution

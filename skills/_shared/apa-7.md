@@ -7,6 +7,9 @@ Use this reference when revising APA-style HRD and social science manuscripts.
 - Use author-date citation logic: parenthetical `(Author, year)` or narrative `Author (year)`.
 - Preserve citation intent and placement unless it clearly separates evidence from the claim it supports.
 - Do not invent missing publication years, page numbers, DOIs, issue numbers, or reference-list details.
+- Keep every citation adjacent to the claim it supports; do not strand citations at the end of a paragraph after moving, merging, or splitting claims.
+- When revising synthesis, duplicate a citation if one source supports multiple revised clauses, and keep multiple citations only where each source supports the claim being made.
+- If a claim sounds empirical, definitional, theoretical, causal, comparative, or evaluative and no citation or user-provided evidence supports it, flag it as needing citation instead of smoothing over it.
 - Prefer clear, concise sentences with explicit subjects and verbs.
 - Use past tense for specific procedures and results from a completed study.
 - Use present tense for established theory, article structure, and general conclusions.

@@ -1,6 +1,6 @@
 ---
 name: hrd-research
-description: Use for Human Resource Development research in APA 7 style, including developing papers from scratch, building manuscripts from ideas or materials, manuscript drafting, paragraph revision, theory framing, literature synthesis, research questions, hypotheses, discussion sections, implications for HRD practice, journal fit for HRDQ, HRDR, ADHR, HRDI, and HRD research charts, graphs, tables, figure captions, visualization choices, and interpretation for workforce learning, training, organization development, adult learning, career development, and performance improvement research.
+description: Use for Human Resource Development research in APA 7 style, including developing papers from scratch, building manuscripts from ideas or materials, manuscript drafting, paragraph revision, strict in-text citation integrity, theory framing, literature synthesis, research questions, hypotheses, discussion sections, implications for HRD practice, journal fit for HRDQ, HRDR, ADHR, HRDI, and HRD research charts, graphs, tables, figure captions, visualization choices, and interpretation for workforce learning, training, organization development, adult learning, career development, and performance improvement research.
 ---
 
 # HRD Research Router
@@ -18,7 +18,7 @@ Do not try to apply the full workflow from memory. Route the request, read the m
 
 Read `manifest.yaml`.
 
-Then read every file listed under `always_load`. These files contain the APA, HRD domain, stance, workflow, and output rules that apply to every request.
+Then read every file listed under `always_load`. These files contain the APA, HRD domain, citation integrity, stance, workflow, and output rules that apply to every request.
 
 ### 2. Detect Axis Values
 
@@ -46,13 +46,14 @@ Load only the fragments needed for the request. Do not read every file under `st
 Apply the loaded material in this order:
 
 1. Shared APA 7 and HRD domain guidance.
-2. Core stance, workflow, and output format.
-3. Genre-specific expectations.
-4. Section-specific structure and failure modes.
-5. Journal-specific fit guidance.
-6. Paper-development guidance when the request involves building a paper from an idea, notes, data, or materials.
-7. Visualization guidance when the request involves graphs, charts, tables, captions, or figure interpretation.
-8. The user's stated preferences.
+2. Core citation integrity rules.
+3. Core stance, workflow, and output format.
+4. Genre-specific expectations.
+5. Section-specific structure and failure modes.
+6. Journal-specific fit guidance.
+7. Paper-development guidance when the request involves building a paper from an idea, notes, data, or materials.
+8. Visualization guidance when the request involves graphs, charts, tables, captions, or figure interpretation.
+9. The user's stated preferences.
 
 Preserve the author's claims, citations, constructs, variables, sample details, research design, hypotheses, findings, and limitations unless the user explicitly asks for substantive rewriting.
 
@@ -68,6 +69,8 @@ Use deeper references only when the user asks for detailed review, a checklist, 
 - Keep notes concise unless the user asks for detailed explanation.
 - Do not invent citations, findings, journal policies, or reference details.
 - Preserve APA in-text citation style unless the user asks to convert formats.
+- Treat every source-dependent claim as needing an adjacent citation. If a revision moves, merges, splits, generalizes, or strengthens a cited sentence, move or duplicate the citation as needed and flag uncertain support.
+- Do not let a paragraph-final citation appear to support claims that precede it unless the original text clearly uses that citation for the full claim sequence.
 - For build-from-scratch requests, separate user-provided evidence from proposed argument structure; mark missing evidence as needed rather than filling it in.
 - For graphs, charts, or tables, preserve the user's data and statistical meaning; do not invent values, labels, or relationships.
 - Flag missing evidence, unsupported causal language, ambiguous constructs, inconsistent terminology, and claims that exceed the design.
