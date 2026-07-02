@@ -32,6 +32,7 @@ skills/
 - HRD manuscript drafting, revision, restructuring, and review
 - Paper development from ideas, notes, data, findings, or rough materials
 - Motivation, paper architecture, evidence-bank, section-blueprint, and drafting-plan support
+- De-AI polishing to reduce generic AI vocabulary, rhythm, and flow
 - Strict in-text citation integrity and claim-to-citation checking
 - Reference-list checking, APA 7 reference formatting, and citation-reference matching
 - APA 7 social science style polishing
@@ -115,6 +116,10 @@ Use $hrd-research to create a motivation statement, paper architecture, and sect
 
 ```text
 Use $hrd-research to check whether my in-text citations match my reference list and flag APA 7 reference issues.
+```
+
+```text
+Use $hrd-research to revise this paragraph with a de-AI pass while preserving my meaning and citations.
 ```
 
 ```text

@@ -9,3 +9,4 @@ Use this sequence:
 3. Reorder material so claims build toward the section's job.
 4. Remove repetition only when it does not remove necessary evidence.
 5. Then polish transitions and sentence clarity.
+6. Run a de-AI pass so the revised structure does not sound formulaic, inflated, or overly symmetrical.
