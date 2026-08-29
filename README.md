@@ -30,6 +30,7 @@ skills/
 ## What `hrd-research` Supports
 
 - HRD manuscript drafting, revision, restructuring, and review
+- Scopus- and Semantic Scholar-supported scholarly article discovery and metadata retrieval
 - Paper development from ideas, notes, data, findings, or rough materials
 - Motivation, paper architecture, evidence-bank, section-blueprint, and drafting-plan support
 - De-AI polishing to reduce generic AI vocabulary, rhythm, and flow
@@ -56,7 +57,7 @@ skills/
 
 The current router axes are:
 
-- `task`: build-paper, polish, draft, restructure, review, visualize, interpret-visual, table
+- `task`: literature-search, build-paper, polish, draft, restructure, review, visualize, interpret-visual, table
 - `genre`: empirical, conceptual, review, methods, generic
 - `section`: abstract, introduction, literature-review, theory, methods, rq-hypotheses, discussion, implications, conclusion, reviewer-facing
 - `journal`: generic, HRDQ, HRDR, ADHR, HRDI
@@ -78,6 +79,8 @@ cp -R skills/hrd-research ~/.codex/skills/
 ```
 
 Start a fresh Codex session after copying.
+
+For article discovery, set API keys outside the repository as `SCOPUS_API_KEY` and `SEMANTIC_SCHOLAR_API_KEY` environment variables. The skill never requires either key to be written into a tracked file.
 
 ## Use In Codex
 

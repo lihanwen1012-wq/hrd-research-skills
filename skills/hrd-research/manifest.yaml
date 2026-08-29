@@ -1,5 +1,5 @@
 name: hrd-research
-version: 2.5.0
+version: 2.7.0
 description: >
   Router manifest for HRD research writing, citation/reference checking, and visualization. SKILL.md uses this file to
   decide which reusable guidance fragments to load for developing a paper from
@@ -18,7 +18,9 @@ always_load:
 axes:
   task:
     detect: >
-      Decide what kind of research work the user is asking for. Use build-paper
+      Decide what kind of research work the user is asking for. Use literature-search
+      when the user wants to find, identify, map, or screen scholarly articles.
+      Use build-paper
       when the user wants to develop a paper from an idea, data, notes,
       materials, findings, or partial plan. Use polish for
       local clarity, style, APA, or sentence-level revision. Use draft for new
@@ -27,6 +29,7 @@ axes:
       Use visualize for graph or chart creation, interpret-visual for explaining
       an existing visualization, and table for APA-style tables.
     values:
+      literature-search: static/fragments/task/literature-search.md
       build-paper: static/fragments/task/build-paper.md
       polish: static/fragments/task/polish.md
       draft: static/fragments/task/draft.md
@@ -138,6 +141,10 @@ axes:
 
 references:
   on_demand:
+    - condition: searching for, identifying, mapping, or screening scholarly articles
+      path: references/scopus-search.md
+    - condition: searching for, identifying, mapping, or screening scholarly articles
+      path: references/semantic-scholar-search.md
     - condition: revising or evaluating prose quality
       path: references/revision-checklist.md
     - condition: checking references, reference-list quality, or citation/reference consistency

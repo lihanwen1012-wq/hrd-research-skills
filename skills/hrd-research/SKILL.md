@@ -1,6 +1,6 @@
 ---
 name: hrd-research
-description: Use for Human Resource Development research in APA 7 style, including developing papers from scratch, building manuscripts from ideas or materials, manuscript drafting, paragraph revision, de-AI polishing to avoid generic AI vocabulary/rhythm/flow, strict in-text citation integrity, reference-list checking, citation-reference matching, APA 7 reference formatting, theory framing, literature synthesis, research questions, hypotheses, discussion sections, implications for HRD practice, journal fit for HRDQ, HRDR, ADHR, HRDI, and HRD research charts, graphs, tables, figure captions, visualization choices, and interpretation for workforce learning, training, organization development, adult learning, career development, and performance improvement research.
+description: Use for Human Resource Development research in APA 7 style, including Scopus- and Semantic Scholar-supported article discovery, developing papers from scratch, building manuscripts from ideas or materials, manuscript drafting, paragraph revision, de-AI polishing to avoid generic AI vocabulary/rhythm/flow, strict in-text citation integrity, reference-list checking, citation-reference matching, APA 7 reference formatting, theory framing, literature synthesis, research questions, hypotheses, discussion sections, implications for HRD practice, journal fit for HRDQ, HRDR, ADHR, HRDI, and HRD research charts, graphs, tables, figure captions, visualization choices, and interpretation for workforce learning, training, organization development, adult learning, career development, and performance improvement research.
 ---
 
 # HRD Research Router
@@ -24,7 +24,7 @@ Then read every file listed under `always_load`. These files contain the APA, HR
 
 Use `manifest.yaml` to detect:
 
-- `task`: build-paper, polish, draft, restructure, review, visualize, interpret-visual, or table.
+- `task`: literature-search, build-paper, polish, draft, restructure, review, visualize, interpret-visual, or table.
 - `genre`: empirical, conceptual, review, methods, or generic.
 - `section`: abstract, introduction, literature-review, theory, methods, rq-hypotheses, discussion, implications, conclusion, or reviewer-facing.
 - `journal`: generic, hrdq, hrdr, adhr, or hrdi.
@@ -65,6 +65,8 @@ Preserve the author's claims, citations, constructs, variables, sample details, 
 Use `references/revision-checklist.md` when revising or evaluating prose quality.
 
 Use deeper references only when the user asks for detailed review, a checklist, or explicit diagnosis. If a needed reference does not exist yet, say what would be useful to add instead of inventing source-specific rules.
+
+For article discovery or literature-search requests, read `references/scopus-search.md` and `references/semantic-scholar-search.md`. Use either or both bundled helpers when their environment variables are available. Treat all search metadata as discovery evidence rather than proof of an article's substantive claims.
 
 ## Output Rules
 
