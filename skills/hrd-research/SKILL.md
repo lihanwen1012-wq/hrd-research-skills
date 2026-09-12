@@ -62,11 +62,13 @@ Preserve the author's claims, citations, constructs, variables, sample details, 
 
 ### 5. Reach For References Only When Needed
 
+Before the first article search in a conversation, read `references/api-setup.md`. Check key availability privately and offer setup for missing sources once. Users may skip setup and continue with available sources; ordinary writing does not require keys.
+
 Use `references/revision-checklist.md` when revising or evaluating prose quality.
 
 Use deeper references only when the user asks for detailed review, a checklist, or explicit diagnosis. If a needed reference does not exist yet, say what would be useful to add instead of inventing source-specific rules.
 
-For article discovery or literature-search requests, read `references/scopus-search.md` and `references/semantic-scholar-search.md`. Use either or both bundled helpers when their environment variables are available. Treat all search metadata as discovery evidence rather than proof of an article's substantive claims.
+For article discovery, use the configured sources: Scopus (`SCOPUS_API_KEY`), Semantic Scholar (`SEMANTIC_SCHOLAR_API_KEY`), and Web of Science Starter (`WOS_API_KEY`). Read the corresponding `references/scopus-search.md`, `references/semantic-scholar-search.md`, or `references/wos-search.md` before querying. Treat search metadata as discovery evidence rather than proof of substantive claims; disclose unavailable sources.
 
 ## Output Rules
 

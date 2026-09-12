@@ -29,6 +29,8 @@ skills/
 
 ## What `hrd-research` Supports
 
+- Web of Science Starter article searches using a local `WOS_API_KEY`; request access at https://developer.clarivate.com/apis/wos-starter. API access must be approved before live searches can run.
+
 - HRD manuscript drafting, revision, restructuring, and review
 - Scopus- and Semantic Scholar-supported scholarly article discovery and metadata retrieval
 - Paper development from ideas, notes, data, findings, or rough materials
@@ -80,7 +82,9 @@ cp -R skills/hrd-research ~/.codex/skills/
 
 Start a fresh Codex session after copying.
 
-For article discovery, set API keys outside the repository as `SCOPUS_API_KEY` and `SEMANTIC_SCHOLAR_API_KEY` environment variables. The skill never requires either key to be written into a tracked file.
+On the first article-search request in a conversation, the skill checks which API keys are configured and offers setup instructions for missing sources. Users can skip setup and continue with available sources or public web search. Downloading the repository itself does not launch a setup prompt.
+
+Each user supplies their own keys through `SCOPUS_API_KEY`, `SEMANTIC_SCHOLAR_API_KEY`, and/or `WOS_API_KEY`. Keys are optional for ordinary writing and are never bundled in GitHub downloads. See [private API setup](skills/hrd-research/references/api-setup.md) for provider links and configuration instructions. Never paste keys into chat or tracked files.
 
 ## Use In Codex
 
