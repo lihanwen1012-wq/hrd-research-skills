@@ -62,6 +62,8 @@ Preserve the author's claims, citations, constructs, variables, sample details, 
 
 ### 5. Reach For References Only When Needed
 
+When the user wants to connect an institutional or other research API, read `references/custom-api.md` for adapter, authentication, local-only installation, and verification guidance. Adding a key alone does not implement a new source.
+
 Before the first article search in a conversation, read `references/api-setup.md`. Check key availability privately and offer setup for missing sources once. Users may skip setup and continue with available sources; ordinary writing does not require keys.
 
 Use `references/revision-checklist.md` when revising or evaluating prose quality.

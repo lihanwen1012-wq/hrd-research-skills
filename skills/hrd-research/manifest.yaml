@@ -1,5 +1,5 @@
 name: hrd-research
-version: 2.9.0
+version: 2.9.1
 description: >
   Router manifest for HRD research writing, citation/reference checking, and visualization. SKILL.md uses this file to
   decide which reusable guidance fragments to load for developing a paper from
@@ -141,6 +141,8 @@ axes:
 
 references:
   on_demand:
+    - condition: connecting an institutional or other research API
+      path: references/custom-api.md
     - condition: first article search in a conversation or API setup request
       path: references/api-setup.md
     - condition: searching for articles using Web of Science

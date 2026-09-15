@@ -86,6 +86,34 @@ On the first article-search request in a conversation, the skill checks which AP
 
 Each user supplies their own keys through `SCOPUS_API_KEY`, `SEMANTIC_SCHOLAR_API_KEY`, and/or `WOS_API_KEY`. Keys are optional for ordinary writing and are never bundled in GitHub downloads. See [private API setup](skills/hrd-research/references/api-setup.md) for provider links and configuration instructions. Never paste keys into chat or tracked files.
 
+## Connect Your Institution or Another API
+
+You can connect an institutional repository, researcher directory, library discovery service, or another scholarly API. Each source needs an adapter matched to its documentation and access requirements; a key alone does not enable a new source.
+
+1. **Find the API documentation.** Ask your library or provider for its official API URL, searchable content, authentication requirements, and request limits. A library website subscription does not automatically provide API or full-text access.
+2. **Choose local or shared installation.** For personal use, add the extension to your installed skill folder outside the Git checkout. Keep a private backup because reinstalling can overwrite local changes. If you intend to share an adapter, add its code and documentation to your own repository or fork, without credentials or restricted data.
+3. **Configure access privately.** For a key-based service, use a dedicated environment variable such as `MY_INSTITUTION_API_KEY`. On Windows, add it through **Edit environment variables for your account** and reopen your agent application. On macOS/Linux or managed hosts, use your launcher's private environment or secret settings. Public APIs may need no key; OAuth services require the provider's sign-in flow. Never paste keys into chat or tracked files.
+4. **Add the adapter and instructions.** Have your agent create `scripts/search_my_institution.py` and `references/my-institution.md` inside the skill folder. The adapter must follow the provider's endpoint, query syntax, authentication, pagination, and response format. Add a route in `SKILL.md` and an on-demand reference entry in `manifest.yaml` so the agent knows when to use it. The existing search helpers provide structural examples.
+5. **Test a small search.** Check a known record, its source link and metadata, an empty result, and pagination if supported. Label the source and access limitations. When combining databases, deduplicate by DOI or title/year and verify substantive claims against the original articles.
+
+You can copy this request into your agent and fill in the brackets:
+
+```text
+Extend my installed HRD Research skill with an institutional or other research API.
+Official documentation: [URL]
+Search purpose: [publications, researchers, datasets, or other]
+Authentication: [public, API key, OAuth, or unknown]
+Environment variable name, if needed: MY_INSTITUTION_API_KEY
+
+Keep the extension local; do not change or push the public GitHub repository.
+Read the official documentation, add the search adapter and routing instructions,
+and test one small search if access is available. Tell me how to configure
+credentials privately; do not ask me to paste them into chat.
+Preserve the existing research sources.
+```
+
+For implementation details and example routing entries, see [the custom API guide](skills/hrd-research/references/custom-api.md).
+
 ## Use In Codex
 
 Invoke the skill explicitly with `$hrd-research`:

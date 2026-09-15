@@ -1,5 +1,7 @@
 # HRD Research Skills Installation Guide
 
+To connect your institution's repository, researcher directory, or another research API, see [the custom API guide](skills/hrd-research/references/custom-api.md). It covers private configuration, local-only extensions, adapter examples, and verification. Back up personal extensions outside the repository before reinstalling or updating the skill.
+
 This file explains how to install the HRD research skills in this repository so they are usable in Codex and other coding agents.
 
 The most important point is simple:

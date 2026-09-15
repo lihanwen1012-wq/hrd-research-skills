@@ -14,6 +14,8 @@ Check only whether each variable is present and nonempty in the process that wil
 
 Each user supplies their own credentials. The repository contains no shared keys. Subscription and institutional entitlements can affect access.
 
+Users may also connect institutional or other research APIs. Follow [the custom API guide](custom-api.md) to add the appropriate adapter and routing before checking a new service's credentials. Public APIs may require no key; optional extensions should not make setup mandatory for everyone.
+
 ## Offer setup once
 
 If any key is missing, name the missing sources and ask one concise question, adapted to the observed status:
